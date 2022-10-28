@@ -188,6 +188,34 @@ namespace _1st_Lesson
                 Console.WriteLine($"X: {x38}, S: {sum38}, Y: {y38}");
             }
             #endregion
+            #region Excercise third level number 9
+            double sum, nSum;
+            double y;
+            double product2;
+            double product1;
+            double sign;
+            for (double x = 0.1; x < 0.5; x += 0.05)
+            {
+                sum = 0;
+                nSum = 0;
+                int i = 0;
+                product1 = x;
+                product2 = 1.0;
+                sign = -1;
+                do
+                {
+                    sign = -sign;
+                    nSum = sign * product1 / product2;
+                    sum += nSum;
+                    i++;
+                    product2 = (2 * i + 1);
+                    product1 *= (x * x);
+                }
+                while (nSum >= 0.0001);
+                y = Math.Atan(x);
+                Console.WriteLine($"X: {x}, S: {sum}, Y: {y}");
+            }
+            #endregion
         }
     }
 }
